@@ -29,11 +29,12 @@ Variables
 * `SMTP_PASSWORD=`: Password to connect to the external relay (required, otherwise the container fails to start)
 * `USE_TLS=`: Remote require tls. Might be "yes" or "no". Default: no.
 * `TLS_VERIFY=`: Trust level for checking the remote side cert. (none, may, encrypt, dane, dane-only, fingerprint, verify, secure). Default: may.
+* `HEADERS=`: Create custom_header file as a `header_checks` to add content for headers, e.g. `/^Content-Transfer-Encoding:/i PREPEND Precedence: bulk `
 
 Example
 -------
 
 Launch Postfix container:
 
-    $ docker run -d -h relay.example.com --name="mailrelay" -e SMTP_LOGIN=myLogin -e SMTP_PASSWORD=myPassword -p 25:25 alterrebe/postfix-relay
+    $ docker run -d -h relay.example.com --name="mailrelay" -e SMTP_LOGIN=myLogin -e SMTP_PASSWORD=myPassword -p 25:25 narfman0/postfix-relay
 

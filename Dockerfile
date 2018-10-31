@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Uri Savelchev <alterrebe@gmail.com>
+MAINTAINER Jon Robison <narfman0@gmail.com>
 
 # Packages: update
 RUN apk -U add postfix ca-certificates libsasl py-pip supervisor rsyslog
