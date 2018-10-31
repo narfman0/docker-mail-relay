@@ -24,7 +24,7 @@ Variables
 * `RELAY_HOST_NAME=relay.example.com`: A DNS name for this relay container (usually the same as the Docker's hostname)
 * `ACCEPTED_NETWORKS=192.168.0.0/16 172.16.0.0/12 10.0.0.0/8`: A network (or a list of networks) to accept mail from
 * `EXT_RELAY_HOST=email-smtp.us-east-1.amazonaws.com`: External relay DNS name
-* `EXT_RELAY_PORT=25`: External relay TCP port
+* `EXT_RELAY_PORT=587`: External relay TCP port, default: 587
 * `SMTP_LOGIN=`: Login to connect to the external relay (required, otherwise the container fails to start)
 * `SMTP_PASSWORD=`: Password to connect to the external relay (required, otherwise the container fails to start)
 * `USE_TLS=`: Remote require tls. Might be "yes" or "no". Default: no.
