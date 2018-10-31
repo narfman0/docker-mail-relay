@@ -29,7 +29,7 @@ Variables
 * `SMTP_PASSWORD=`: Password to connect to the external relay (required, otherwise the container fails to start)
 * `USE_TLS=`: Remote require tls. Might be "yes" or "no". Default: no.
 * `TLS_VERIFY=`: Trust level for checking the remote side cert. (none, may, encrypt, dane, dane-only, fingerprint, verify, secure). Default: may.
-* `HEADERS=`: Create custom_header file as a `header_checks` to add content for headers, e.g. `/^Content-Transfer-Encoding:/i PREPEND Precedence: bulk `
+* `HEADERS=`: Create custom_header file as a `header_checks` to add content for headers, e.g. `/^From:/i PREPEND X-SES-MESSAGE-TAGS: Origin=relay`
 
 Example
 -------
